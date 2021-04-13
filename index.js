@@ -22,7 +22,10 @@ Do the following:
 
   if (votingAge >= 18) {
     console.log(true);
-  }
+  } else {
+    console.log(false);
+}
+
 
 /*
 Task 1b - Values
@@ -42,6 +45,8 @@ var secondVar = 5;
 if (firstVar > secondVar){
   firstVar = firstVar - 10;
 }
+
+console.log(firstVar)
 
 
 /*
@@ -168,8 +173,7 @@ Use the game function below to do the following:
 
 function game(user, computer){
     let computer = (Math.random());
-
-}
+    
   
   
 
