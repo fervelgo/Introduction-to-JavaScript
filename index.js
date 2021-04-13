@@ -18,7 +18,11 @@ Do the following:
    HINT: no function required
 */
 
+  var votingAge = 17;
 
+  if (votingAge >= 18) {
+    console.log(true);
+  }
 
 /*
 Task 1b - Values
@@ -32,7 +36,12 @@ Do the following:
 */
 
 
+var firstVar = 10;
+var secondVar = 5;
 
+if (firstVar > secondVar){
+  firstVar = firstVar - 10;
+}
 
 
 /*
@@ -46,7 +55,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+  stringocho = "1999"
 
+  console.log(parseInt(stringocho));
 
 
 /*
@@ -74,10 +85,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+    return humanYears * 7;
 }
 
+console.log(dogYears(30));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +119,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog (age, weight) {
+  if (age>=1) {
+    if (weight <= 5) {
+      return weight * .05;
+    } else if (weight > 5 && weight <= 10) {
+      return weight * .04;
+    } else if(weight > 10 && weight <= 15) {
+      return weight * .03;
+    } else if (weight > 15) {
+      return weight * .02;
+    }
+  } else if (age < 1) {
+    if (age > (2/12) && age <= (4/12)) {
+      return .10 * weight;
+    } else if (age > (4/12) && age <= (7/12)){
+      return weight * .05;
+    } else if (age > (7/12) && age <= 1) {
+      return weight * .04;
+    }
   }
+}
+
+console.log(hungryDog(1,15));
 
 
 
@@ -135,7 +167,8 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+    let computer = (Math.random());
+
 }
   
   
@@ -151,9 +184,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.62;
   }
+
+  console.log(miles(5));
 
 
 
@@ -165,11 +200,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm * 0.0328084;
   }
  
-
+console.log(feet(30));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
