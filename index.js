@@ -171,8 +171,32 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    let computer = (Math.random());
+function game(user,computer){
+    computer = Math.floor(Math.random()*3);
+      if (computer == 0) {
+       computer = 'rock';
+      } else if (computer == 1) {
+        computer = 'paper';
+      } else if (computer == 2) {
+        computer = 'scissors'
+      }
+
+      if (user == computer) {
+        console.log("it's a tie");
+      } else if (user == 'scissors' && computer == 'paper') {
+        console.log("you win!")
+      } else if (user == 'paper' && computer == 'rock') {
+        console.log("you win!")
+      } else if (user == 'rock' && computer == 'scissors') {
+        console.log("you win!")
+      } else {
+        console.log("you lose!")
+      }
+}
+
+console.log(game("scissors"));
+
+
     
   
   
